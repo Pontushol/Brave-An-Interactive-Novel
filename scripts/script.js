@@ -1,58 +1,73 @@
 var gil = [0, 0, 0, 0, 0, 0, "Locked", "Locked", "Locked"];
 
 
-document.getElementById("str-btn").addEventListener("click", addStr);
-function addStr() {
-  gil[0] = gil[0]+1
-}
-
-document.getElementById("agi-btn").addEventListener("click", addAgi);
-function addAgi() {
-  gil[1] = gil[1]+1
-};
-
-
-document.getElementById("dex-btn").addEventListener("click", addDex);
-function addDex() {
-  gil[2] = gil[2]+1
-}
-
-document.getElementById("int-btn").addEventListener("click", addInt);
-function addInt() {
-  gil[3] = gil[3]+1
-}
-
-document.getElementById("prc-btn").addEventListener("click", addPrc);
-function addPrc() {
-  gil[4] = gil[4]+1
-}
-
-document.getElementById("wit-btn").addEventListener("click", addWit);
-function addWit() {
-  gil[5] = gil[5]+1
-}
-
-
 $(document).ready(function() {
     
+  //Start Screen  
+  $("#openGame-btn").click(function() {
+      $("#start-screen").hide('fast');
+      $("#home-screen").show('medium');
+  })
+  
+  //Home Screen
+  $("#newGame-btn").click(function() {
+      $("#home-screen").hide('fast');
+      $("#introduction").show('medium');
+      $("#introduction").addClass('active');
+      $("header").removeClass('push-down-75');
+      $("#return-btn").show('medium');
+  })
+  
+  
+  //Introduction
+  $("#introStart-btn").click(function() {
+      $("#introduction").hide('fast');
+      $("#introduction").removeClass('active');
+      $("#content").show('medium');
+      $("#p1").addClass('active');
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+  })
+  
+  // Home Btn - Nav
+  $(".navHome-btn").click(function() {
+      $(".active").hide('fast');
+      $(".ig-navbar").hide('fast');
+      $("#home-screen").show('medium');
+  })
+  
+  
+  //Return Btn
+  $("#return-btn").click(function() {
+    $("#home-screen").hide('fast');
+    $(".active").show('medium')
+    $(".ig-navbar").show('medium');
+  })
+  
+    
    
-    $(".btn-1").click(function() {
-      $(".choice-1").show('medium');
+    $(".c-btn-1").click(function() {
+      $(".c-1").show('medium');
+      $(".c-1").addClass('active');
   })
   
-  $(".btn-2").click(function() {
-      $(".choice-2").show('medium');
+  $(".c-btn-2").click(function() {
+      $(".c-2").show('medium');
+      $(".c-2").addClass('active');
   })
   
-  $(".btn-3").click(function() {
-      $(".choice-2").show('medium');
+  $(".c-btn-3").click(function() {
+      $(".c-3").show('medium');
+      $(".c-3").addClass('active');
   })
   
-  $(".btn-4").click(function() {
-      $(".choice-2 ").show('medium');
+  $(".c-btn-4").click(function() {
+      $(".c-4 ").show('medium');
+      $(".c-4").addClass('active');
   })
   
-  $(".choice-btn").click(function() {
+  
+  $(".c-btn").click(function() {
       $(this).parent().hide('slow');
   })
   

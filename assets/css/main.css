@@ -46,12 +46,15 @@ ul {
     padding: 0;
 }
 
+.btn {
+    cursor: pointer;
+}
+
 
 .hidden {
     display: none;
 }
 /*-------------------Start Screen------------------------*/
-
 #start-screen {
     height: 100vh;
 }
@@ -70,7 +73,6 @@ ul {
 }
 
 /*-------------------Home Screen------------------------*/
-
 #home-screen {
     height: 100vh;
 }
@@ -83,26 +85,23 @@ header p {
     margin-bottom: 0;
 }
 
-#return-btn-index {
+#return-btn {
     display: flex;
     text-align: center;
     justify-content: flex-end;
     padding-top: 5px;
-    /*display: none;*/
+    display: none;
 }
 
-#return-btn-index button {
+#return-btn p {
     width: 80px;
     border: none;
-    text-decoration: none;
-    background-color: #f3f3f3;
     font-family: Rockwell;
-    color: #707070;
 }
 
-/*.push-down-75 {*/
-/*    padding-top: 75px;*/
-/*}*/
+.push-down-75 {
+    padding-top: 75px;
+}
 
 .btn-container {
     margin-top: 3em;
