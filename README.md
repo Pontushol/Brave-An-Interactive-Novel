@@ -1,4 +1,4 @@
-#Brave - An interactive novel -- README.md
+#Thief - An interactive novel -- README.md
 
 If you're like me, when you read a book you get lost in it. Your world disapears 
 and you live in which ever world you're reading about. 
