@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/733f13d437.js"></script>
+    <link rel="stylesheet" href="../assets/css/main.css" type="text/css" />
+    <title>Brave - An Interactive Novel</title>
+</head>
+
+<body>
+    <nav class="ig-navbar">
+        <a href="home.html">HOME</a>
+        <h2>Prologue</h2>
+        <p id="modal-btn">STATS</p>
+
+        <div id="stats-modal" class="modal">
+            <div class="modal-content">
+                 <div class="modal-header">
+                <span class="close-btn">&times;</span>
+                <h2>Stats / Bio</h2>
+                </div> 
+                <div class="modal-body">
+                    <p>Hello World</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="chapter-header">
+        <h1>
+            PROLOGUE
+        </h1>
+        <p>
+            Fear what is and what is not<br> Bravery without fear is but<br> triumpfant stupidity<br>
+        </p>
+        <p>So fear what is and what is not<br> Then fight fiercely for what could be
+        </p>
+    </header>
+
+    <section class="text-section">
+        <p>The storm is closing in fast.<br> Last night was, without a doubt, the worst night of my life. And today is not looking like it will turn out much better. <br> I woke up to the sound of guns firing and men screaming, the roars of cannons ripping away
+            the nice dream I'd been having. We had been attacked and survived attempted raids before of course. These are, after all, uncertain times in even more uncertain waters. But these pirates... They had been different from the normal unwashed scum,
+            roaming the seas for any loot they can get their hands on. No... The pirates from last night had been well equipped, well trained and perfectly organized. Even well shaven and clean as far as I could tell amidst the chaos.<br> The fighting had been over quickly.
+            Yhey stole what gold we had stored away, took away our guns then promptly set our sails on fire before leaving us stranded at sea. It had taken all night to put out the fire and when the men and I finally could take a breath, the raiders had been long
+            gone.
+            <br> We counted to fourteen dead sailors, all of our provisions gone and our sails burnt to oblivion. Oh, and the holes in the hull from the cannon fire.</p>
+
+        <p>Now im standing alone on the stern of the ship. Leaning on the partially torn railing and I am looking out over the horizon watching the raging spring storm cross the distance between itself and our poor broken ship and, even more so, broken crew.
+            A full branch of lightning stretches over the sky and sends shivers down my spine. We are not going to survive this storm, and it's most likely my fault. </p>
+
+        <p>"Gil!"</p>
+
+        <p>Captain Moore is approaching from the deck from where he has been shouting out instructions to the men all morning to prepare for the storm.
+        </p>
+        <p>"Captain."</p>
+        <p>I reply, knowing what he's going to say next.
+        </p>
+        <p> "You need to get below deck, the storm will hit any minute now. Don't you worry about the men, they have seen worse storms than this. Just get your ass below and hold on to your guts, it's going to get a little bumpy."
+        </p>
+        <p>He was lying. The captain knew just as well as I that the men were tired and the ship was in no shape to handle a storm of this magnitude with just a few bumps. It would get torn apart.
+        </p>
+
+
+    </section>
+    <section class="choice-section-1 text-section" id>
+        <div class="choice-display choice-display-1">
+            <button class="choice-btn btn-1" id="str-btn" type="button" href="#">
+            Stay on deck and help
+        </button>
+            <button class="choice-btn btn-2 null-btn" type="button" href="#">
+            Follow the captains orders.
+        </button>
+            <button class="choice-btn btn-3" type="button" href="#">
+            Head to bow to go out with a bang
+        </button>
+            <button class="choice-btn btn-4" id="wit-btn" type="button" href="#">
+            Tell a joke to lighten the mood
+        </button>
+        </div>
+
+
+
+        <div class="choice-1 choice-hidden">
+            <p> "Captain, Just because I'm royal, that does not mean I'm stupid." I say with a small smile "I know just as well as you that we are less than probable to reach Entagrim alive. I mean, it was a fools' hope to begin with, don't you think? The
+                fact that we got this far is a small miracle in itself. So I refuse to follow your orders, Mr. Moore. I will stay up here and help as best I can and if the gods are with us maybe we can get out of this mess. But I will not sit below deck
+                like a child waiting for his punishment."
+            </p>
+            <p>Something flashed in the captains eyes<br> "Very well. Then tie yourself to the mast like the rest of the men, half of the railing is gone and we dont want you falling over board at the first wave. After that you can man a starboard side oar,
+                then start praying, boy." <br>It takes a certain kind of man to call a prince of the northern isles 'boy' and get away with hit with both hands, Captain Moore is such a man.
+            </p>
+            <p>On my way over to the mast, It's as if night suddenly falls. The almost black clouds of the storm cover the sky and in seconds the full force of the storm is over us.
+            </p>
+
+            <div class="choice-display choice-display-2">
+                <button class="choice-btn btn-1" type="button" href="#">
+            Man the oars without securing a rope
+        </button>
+                <button class="choice-btn btn-2" type="button" href="#">
+            Rush to the mast to secure a rope
+        </button>
+            </div>
+        </div>
+        <div class="null-choice"></div>
+        <div class="null-choice"></div>
+        <div class="wit-choice"></div>
+    </section>
+
+
+    <button class="choice-btn btn-1 hidden" id="agi-btn" type="button" href="#"></button>
+    <button class="choice-btn btn-1 hidden" id="dex-btn" type="button" href="#"></button>
+    <button class="choice-btn btn-1 hidden" id="int-btn" type="button" href="#"></button>
+    <button class="choice-btn btn-1 hidden" id="prc-btn" type="button" href="#"></button>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
