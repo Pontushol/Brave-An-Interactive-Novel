@@ -35,7 +35,7 @@
             </div>
         </nav>
         <header class="push-down-75">
-            <h1 id="home-title">Brave</h1>
+            <h1 id="home-title">Thief</h1>
             <p>Courage forms within <br>Cowardness forms without <br>Both can be lost and found <br>for they can both be taken
             </p>
             <p>Unyielding strength is bought<br>before birth and<br>the price is purpose</p>
@@ -61,7 +61,7 @@
 
     <section id="introduction" class="hidden">
         <nav id="intro-nav">
-            <p class="navHome-btn">HOME</p>
+            <p class="navHome-btn btn">HOME</p>
         </nav>
         <header>
             <h1 id="intro-header">
@@ -97,20 +97,24 @@
             <nav class="ig-navbar">
                 <p class="navHome-btn">HOME</p>
                 <h2>Prologue</h2>
-                <p id="modal-btn">STATS</p>
-
+    <!---------------------------------MODAL------------------------------------------->
+                <p id="modal-btn" class="btn">STATS</p>
                 <div id="stats-modal" class="modal">
                     <div class="modal-content">
                         <div class="modal-header">
                             <span class="close-btn">&times;</span>
                             <h2>Stats / Bio</h2>
                         </div>
+                        
                         <div class="modal-body">
-                            <p>Hello World</p>
+                            <h6>Stats</h6>
+                            <div id="stats-chart">
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
-
+<!---------------------------------MODAL ENDE------------------------------------------->
             </nav>
             <div id="p1">
             <header class="chapter-header">
@@ -164,6 +168,14 @@
                         I have plans for her and I..."<br> "Phillipa. "<br> The man interrupted.<br> "Plans change. You will give me what I'm asking for, this is not a discussion. Understood? "<br> "Yes. Yes of course. I will talk to her and you can come
                         pick her up by the end of the week."<br> "I will be back for her tomorrow. As for the payment... "<br> The voices were moving away and Jay couldn't make out any more words. She slid back to her blanket and crawled under it. Who
                         was that man.. and who was he picking up tomorrow? Slowly she dozed off into an uneasy sleep filled with dreams of unknown voices whispering secrets.</p>
+                <ul>
+                        <li class="btn str-btn" id="str-btn">str</li>
+                        <li class="btn spd-btn">spd</li>
+                        <li class="btn dex-btn">dex</li>
+                        <li class="btn sth-btn">sth</li>
+                        <li class="btn wit-btn">wit</li>
+                        <li class="btn pre-btn">pre</li>
+                </ul>
                 </div>
                 <div class="c-2 text-section hidden">
                     <p>Because she had arrived home so late from the nights' job, she had the fortune of sleeping right by the door. It was generally considered the worst spot in the room because any time anyone had to step out for a midnight piss, you would
@@ -172,8 +184,7 @@
                         The voices moved further away again and she couldn't make out anything else. Jay put the voices out of her mind, she needed sleep and risking the wrath of King by sneaking over to the door to listen g to a conversation that had
                         nothing to do with her seemed like a terrible idea. She was a curious child but after living her whole life just a mistake away from a beating, caution won. Slowly she dozed off into an uneasy sleep filled with dreams of unknown
                         voices whispering secrets.
-
-                    </p>
+                    
                 </div>
 
                 <div class="text-section hidden" id="p1">
@@ -210,6 +221,7 @@
                         <li class="c-btn c-btn-2">Excited</li>
                         <li class="c-btn c-btn-3">Like stealing it and reading it</li>
                         <li class="c-btn c-btn-4">Indifferent.</li>
+                        
                     </ul>
                 </div>
         </div>
@@ -220,10 +232,16 @@
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script src="scripts/script.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"></script>
+    <script src="scripts/script.js"></script>
+    <script>
+       
+        
+        
+    </script>
+    
 
     </div>
 </body>

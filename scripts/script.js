@@ -1,4 +1,28 @@
-var gil = [0, 0, 0, 0, 0, 0, "Locked", "Locked", "Locked"];
+//-----------------------------Stats Dashboard
+var jay = [1, 1, 1, 1, 1, 1];
+
+var h = 100;
+var w = 150;
+var barPadding = 1;
+
+
+
+var colWidth = w / jay.length;
+var barWidth = colWidth - barPadding;
+
+var svg = d3.select("#stats-chart")
+    .append("svg")
+    .attr("height", h)
+    .attr("width", w)
+    
+    change_data()
+
+function change_data() {
+var data = generate_data(numberOfBars);
+plot_data(data);
+
+
+
 
 
 $(document).ready(function() {
@@ -7,7 +31,7 @@ $(document).ready(function() {
   $("#openGame-btn").click(function() {
       $("#start-screen").hide('fast');
       $("#home-screen").show('medium');
-  })
+  });
   
   //Home Screen
   $("#newGame-btn").click(function() {
@@ -16,7 +40,7 @@ $(document).ready(function() {
       $("#introduction").addClass('active');
       $("header").removeClass('push-down-75');
       $("#return-btn").show('medium');
-  })
+  });
   
   
   //Introduction
@@ -27,22 +51,22 @@ $(document).ready(function() {
       $("#p1").addClass('active');
       $("html, body").animate({ scrollTop: 0 }, "slow");
   return false;
-  })
+  });
   
   // Home Btn - Nav
   $(".navHome-btn").click(function() {
       $(".active").hide('fast');
       $(".ig-navbar").hide('fast');
       $("#home-screen").show('medium');
-  })
+  });
   
   
   //Return Btn
   $("#return-btn").click(function() {
     $("#home-screen").hide('fast');
-    $(".active").show('medium')
+    $(".active").show('medium');
     $(".ig-navbar").show('medium');
-  })
+  });
   
     
    
@@ -72,7 +96,6 @@ $(document).ready(function() {
   })
   
 })
-
 
 
 // --------------------------- Modal
@@ -108,4 +131,54 @@ function clickOutside(e) {
     modal.style.display = "none"
     }
 }
+
+
+
+document.getElementsByClassName("str-btn")[0].addEventListener("click", addStr);
+function addStr() {
+  jay[0] = jay[0]+1
+}
+
+document.getElementsByClassName("spd-btn")[0].addEventListener("click", addSpd);
+function addSpd() {
+  jay[1] = jay[1]+1
+};
+
+
+document.getElementsByClassName("dex-btn")[0].addEventListener("click", addDex);
+function addDex() {
+  jay[2] = jay[2]+1
+}
+
+document.getElementsByClassName("sth-btn")[0].addEventListener("click", addSth);
+function addSth() {
+  jay[3] = jay[3]+1
+}
+
+document.getElementsByClassName("wit-btn")[0].addEventListener("click", addWit);
+function addWit() {
+  jay[4] = jay[4]+1
+}
+
+document.getElementsByClassName("pre-btn")[0].addEventListener("click", addPre);
+function addPre() {
+  jay[5] = jay[5]+1
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
