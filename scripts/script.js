@@ -1,5 +1,13 @@
 //-----------------------------Stats Dashboard
-var jay = [1, 1, 1, 1, 1, 1];
+var jay = [
+    { stat: "str", value: 1 },
+    { stat: "spd", value: 1 },
+    { stat: "dex", value: 1 },
+    { stat: "sth", value: 1 },
+    { stat: "wit", value: 1 },
+    { stat: "pre", value: 1 },
+
+];
 
 var h = 100;
 var w = 150;
@@ -59,11 +67,11 @@ function resize_bars(bars, data) {
             return i * colWidth;
         })
         .attr("y", function(d) {
-            return h - d;
+            return h - d.value;
         })
         .attr("width", barWidth)
         .attr("height", function(d) {
-            return d;
+            return d.value;
         });
 }
 
@@ -73,20 +81,34 @@ function create_labels(labels) {
         .attr("text-anchor", "middle")
         .attr("font-family", "sans-serif")
         .attr("font-size", "11px")
-        .attr("fill", "white");
+        .attr("fill", "black");
 }
 
 function position_labels(labels, data) {
     labels.transition()
         .duration(500)
         .text(function(d) {
-            return d;
+            return d.value;
         })
         .attr("x", function(d, i) {
             return i * colWidth + barWidth / 2;
         })
         .attr("y", function(d) {
-            return h - d + 14;
+            return h - d.value;
+        });
+}
+
+function position_stat_labels(labels, data) {
+    labels.transition()
+        .duration(500)
+        .text(function(d) {
+            return d.stat;
+        })
+        .attr("x", function(d, i) {
+            return i * colWidth + barWidth / 2;
+        })
+        .attr("y", function(d) {
+            return h;
         });
 }
 
@@ -137,38 +159,55 @@ $(document).ready(function() {
         $(".active").show('medium');
         $(".ig-navbar").show('medium');
     });
+    
 
+    $(".next").click(function() {
+        $(".active").removeClass("active");
+        $(this).closest(".page").hide("fast");
+        $(this).closest(".page").next(".page").show('medium');
+        $(this).closest(".page").next(".page").addClass('active');
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+    
 
 
     $(".c-btn-1").click(function() {
-        $(".c-1").show('medium');
-        $(".c-1").addClass('active');
-    })
+        $(this).closest(".text-section").siblings(".c-1").show('medium');
+        $(this).closest(".text-section").siblings(".c-1").addClass('active');
+    });
 
     $(".c-btn-2").click(function() {
-        $(".c-2").show('medium');
-        $(".c-2").addClass('active');
-    })
+        $(this).closest(".text-section").siblings(".c-2").show('medium');
+        $(this).closest(".text-section").siblings(".c-2").addClass('active');
+    });
 
     $(".c-btn-3").click(function() {
-        $(".c-3").show('medium');
-        $(".c-3").addClass('active');
-    })
+        $(this).closest(".text-section").siblings(".c-3").show('medium');
+        $(this).closest(".text-section").siblings(".c-3").addClass('active');
+    });
 
     $(".c-btn-4").click(function() {
-        $(".c-4 ").show('medium');
-        $(".c-4").addClass('active');
-    })
+        $(this).closest(".text-section").siblings(".c-3").show('medium');
+        $(this).closest(".text-section").siblings(".c-3").addClass('active');
+    });
+    
+    $(".cp-btn").click(function() {
+        $(this).closest(".text-section").next(".choice.plus").show('medium');
+        $(this).closest(".text-section").next(".choice-plus").addClass('active');
+    });
 
 
+
+//Hide Choice List
     $(".c-btn").click(function() {
         $(this).parent().hide('slow');
     })
-    
-    
-    
+
+
+
     //Stats 
-    
+
     $(".str-btn").click(addStr);
     $(".spd-btn").click(addSpd);
     $(".dex-btn").click(addDex);
@@ -179,22 +218,27 @@ $(document).ready(function() {
 })
 
 function addStr() {
-    jay[0] = jay[0] + 1
+    jay[0]["value"]++
 }
+
 function addSpd() {
-    jay[1] = jay[1] + 1
+    jay[1]["value"]++
 };
+
 function addDex() {
-    jay[2] = jay[2] + 1
+    jay[2]["value"]++
 }
+
 function addSth() {
-    jay[3] = jay[3] + 1
+    jay[3]["value"]++
 }
+
 function addWit() {
-    jay[4] = jay[4] + 1
+    jay[4]["value"]++
 }
+
 function addPre() {
-    jay[5] = jay[5] + 1
+    jay[5]["value"]++
 }
 
 
@@ -234,5 +278,3 @@ function clickOutside(e) {
         modal.style.display = "none"
     }
 }
-
-
