@@ -1,6 +1,6 @@
 #Thief - An interactive novel -- README.md
 
-https://pontushol.github.io/Brave-An-Interactive-Novel/
+https://pontushol.github.io/Thief-An-Interactive-Novel/
 
 If you're like me, when you read a book you get lost in it. Your world disapears 
 and you live in which ever world you're reading about. 
