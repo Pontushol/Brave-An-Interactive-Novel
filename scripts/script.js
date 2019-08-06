@@ -133,6 +133,9 @@ $(document).ready(function() {
         $("header").removeClass('push-down-75');
         $("#return-btn").show('medium');
         $(".active").removeClass("active");
+        $(".choice-display").show();
+        $("#content").hide('medium');
+        $(".ig-navbar").show('medium');
     });
 
 
@@ -146,6 +149,7 @@ $(document).ready(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
     });
+    
 
     // Home Btn - Nav
     $(".navHome-btn").click(function() {
@@ -216,6 +220,7 @@ $(document).ready(function() {
     $(".sth-btn").click(addSth);
     $(".wit-btn").click(addWit);
     $(".pre-btn").click(addPre);
+    $("#newGame-btn").click(resetStats);
 
 })
 
@@ -241,6 +246,10 @@ function addWit() {
 
 function addPre() {
     jay[5]["value"]++
+}
+
+function resetStats() {
+    jay[0, 1, 2, 3, 4, 5]["value"] = 1
 }
 
 
