@@ -172,7 +172,7 @@ $(document).ready(function() {
         return false;
     });
     
-  
+  //Content Navgation Buttons
 
     $(".c-btn-1").click(function() {
         $(this).closest(".text-section").next(".c-1").show('medium');
