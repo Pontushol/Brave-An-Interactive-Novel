@@ -132,6 +132,7 @@ $(document).ready(function() {
         $("#introduction").addClass('active');
         $("header").removeClass('push-down-75');
         $("#return-btn").show('medium');
+        $(".active").removeClass("active");
     });
 
 
@@ -140,6 +141,7 @@ $(document).ready(function() {
         $("#introduction").hide('fast');
         $("#introduction").removeClass('active');
         $("#content").show('medium');
+        $("#p1").show('medium');
         $("#p1").addClass('active');
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
@@ -170,32 +172,32 @@ $(document).ready(function() {
         return false;
     });
     
-
+  
 
     $(".c-btn-1").click(function() {
-        $(this).closest(".text-section").siblings(".c-1").show('medium');
-        $(this).closest(".text-section").siblings(".c-1").addClass('active');
+        $(this).closest(".text-section").next(".c-1").show('medium');
+        $(this).closest(".text-section").next(".c-1").addClass('active');
     });
 
     $(".c-btn-2").click(function() {
-        $(this).closest(".text-section").siblings(".c-2").show('medium');
-        $(this).closest(".text-section").siblings(".c-2").addClass('active');
+        $(this).closest(".text-section").next(".c-2").show('medium');
+        $(this).closest(".text-section").next(".c-2").addClass('active');
     });
 
     $(".c-btn-3").click(function() {
-        $(this).closest(".text-section").siblings(".c-3").show('medium');
-        $(this).closest(".text-section").siblings(".c-3").addClass('active');
+        $(this).closest(".text-section").next(".c-3").show('medium');
+        $(this).closest(".text-section").next(".c-3").addClass('active');
     });
 
     $(".c-btn-4").click(function() {
-        $(this).closest(".text-section").siblings(".c-3").show('medium');
-        $(this).closest(".text-section").siblings(".c-3").addClass('active');
+        $(this).closest(".text-section").next(".c-4").show('medium');
+        $(this).closest(".text-section").next(".c-4").addClass('active');
     });
-    
-    $(".cp-btn").click(function() {
-        $(this).closest(".text-section").next(".choice.plus").show('medium');
+     $(".cp-btn").click(function() {
+        $(this).closest(".text-section").next(".choice-plus").show('medium');
         $(this).closest(".text-section").next(".choice-plus").addClass('active');
     });
+    
 
 
 
