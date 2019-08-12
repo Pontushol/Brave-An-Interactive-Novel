@@ -12,19 +12,12 @@ var jay = [
 var h = 100;
 var w = 150;
 var barPadding = 1;
-
-
-
 var colWidth = w / jay.length;
 var barWidth = colWidth - barPadding;
-
-
 var svg = d3.select("#stats-chart")
     .append("svg")
     .attr("height", h)
     .attr("width", w)
-
-
 // First Call to change_data will plot the initial chart
 change_data();
 // Generates a Random set of data and plots it as a bar chart
@@ -34,23 +27,15 @@ function change_data() {
     plot_data(data);
 }
 
-
-
 function plot_data(data) {
-    // Bind the data to the collections of rectangles and text in the svg element
     var bars = svg.selectAll("rect")
         .data(data);
     var labels = svg.selectAll("text")
         .data(data);
-
-    // Remove any unneeded rectangles and labels (if new data has less items than the existing chart)
     bars.exit().remove();
     labels.exit().remove();
-    // Append any new rectangles and labels that are needed (if new data has more items than existing chart)
     create_bars(bars);
     create_labels(labels);
-    // There should now be the right number of rectangles and labels. 
-    // Resize and position each one according to the new data items.
     resize_bars(bars, data);
     position_labels(labels, data);
 }
@@ -127,12 +112,13 @@ $(document).ready(function() {
 
     //Home Screen
     $("#newGame-btn").click(function() {
+        $(".active").addClass("hidden");
+        $(".active").removeClass("active");
         $("#home-screen").hide('fast');
         $("#introduction").show('medium');
         $("#introduction").addClass('active');
         $("header").removeClass('push-down-75');
         $("#return-btn").show('medium');
-        $(".active").removeClass("active");
         $(".choice-display").show();
         $("#content").hide('medium');
         $(".ig-navbar").show('medium');
@@ -149,7 +135,7 @@ $(document).ready(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
     });
-    
+
 
     // Home Btn - Nav
     $(".navHome-btn").click(function() {
@@ -165,9 +151,10 @@ $(document).ready(function() {
         $(".active").show('medium');
         $(".ig-navbar").show('medium');
     });
-    
+
 
     $(".next").click(function() {
+        $(".active").hide("fast");
         $(".active").removeClass("active");
         $(this).closest(".page").hide("fast");
         $(this).closest(".page").next(".page").show('medium');
@@ -175,43 +162,53 @@ $(document).ready(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
     });
-    
-  //Content Navgation Buttons
-
-    $(".c-btn-1").click(function() {
-        $(this).closest(".text-section").next(".c-1").show('medium');
-        $(this).closest(".text-section").next(".c-1").addClass('active');
+    $(".next-chapter").click(function() {
+        $(".active").hide("fast");
+        $(".active").removeClass("active");
+        $(this).closest("section").hide("fast");
+        $(this).closest("section").next("section").show('medium');
+        $(this).closest("section").next("section").addClass('active');
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
     });
 
-    $(".c-btn-2").click(function() {
-        $(this).closest(".text-section").next(".c-2").show('medium');
-        $(this).closest(".text-section").next(".c-2").addClass('active');
+    //Content Navgation Buttons
+
+    // $(".c-btn-1").click(function() {
+    //     $(this).parent().closest(".text-section").next().children(".c-1").show('medium');
+    //     $(this).parent().closest(".text-section").next().children(".c-1").addClass('active');
+    // });
+
+    // $(".c-btn-2").click(function() {
+    //     $(this).closest(".text-section").next().children(".c-2").show('medium');
+    //     $(this).closest(".text-section").next().children(".c-2").addClass('active');
+    // });
+
+    // $(".c-btn-3").click(function() {
+    //     $(this).closest(".text-section").next().children(".c-3").show('medium');
+    //     $(this).closest(".text-section").next().children(".c-3").addClass('active');
+    // });
+
+    // $(".c-btn-4").click(function() {
+    //     $(this).closest(".text-section").next().children(".c-4").show('medium');
+    //     $(this).closest(".text-section").next().children(".c-4").addClass('active');
+    // });
+
+    $("[class^='c-btn']").click(function() {
+        var lc = $(this).attr('class').split(' ').pop();
+        lc = lc.replace('-btn', '');
+        $(this).closest(".text-section").next().children("." + lc).show('medium');
+        $(this).closest(".text-section").next().children("." + lc).addClass('active');
+    });
+    $(".cp-btn").click(function() {
+        $(this).closest(".text-section").next().children(".choice-plus").show('medium');
+        $(this).closest(".text-section").next().children(".choice-plus").addClass('active');
     });
 
-    $(".c-btn-3").click(function() {
-        $(this).closest(".text-section").next(".c-3").show('medium');
-        $(this).closest(".text-section").next(".c-3").addClass('active');
-    });
-
-    $(".c-btn-4").click(function() {
-        $(this).closest(".text-section").next(".c-4").show('medium');
-        $(this).closest(".text-section").next(".c-4").addClass('active');
-    });
-     $(".cp-btn").click(function() {
-        $(this).closest(".text-section").next(".choice-plus").show('medium');
-        $(this).closest(".text-section").next(".choice-plus").addClass('active');
-    });
-    
-
-
-
-//Hide Choice List
+    //Hide Choice List
     $(".c-btn").click(function() {
         $(this).parent().hide('slow');
     })
-
-
-
     //Stats 
 
     $(".str-btn").click(addStr);
@@ -249,7 +246,12 @@ function addPre() {
 }
 
 function resetStats() {
-    jay[0, 1, 2, 3, 4, 5]["value"] = 1
+    jay[0]["value"] = 1
+    jay[1]["value"] = 1
+    jay[2]["value"] = 1
+    jay[3]["value"] = 1
+    jay[4]["value"] = 1
+    jay[5]["value"] = 1
 }
 
 
