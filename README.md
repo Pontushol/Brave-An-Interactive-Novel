@@ -10,8 +10,6 @@ character develops attributes and skills accordingly aswell.
 There are multiple ways to get through the story so feel free to get creative. Enjoy!
 (This is written for Code Institutes Interactive Frontend Development Module and is the progogue of a larger story to text the concept)
 
-Ps. Please dont pay too much attention to the writing, its a first draft to show off the concept!
-
 ##UX
 The Project is supposed to be easily followed through diffrent choices provided by buttons. The styling is simplistic to keep focus and the reading and the colors are chosen to match those of a book, also to keep focus on the reading. 
 
@@ -63,4 +61,5 @@ Code for Modal from https://www.traversymedia.com/
 
 
 
+Ps. Please dont pay too much attention to the subpar writing, its a first draft to show off the concept!
 
