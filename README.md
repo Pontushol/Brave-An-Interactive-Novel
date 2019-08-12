@@ -11,7 +11,7 @@ There are multiple ways to get through the story so feel free to get creative. E
 (This is written for Code Institutes Interactive Frontend Development Module and is the progogue of a larger story to text the concept)
 
 ##UX
-The Project is supposed to be easily followed through diffrent choices provided by buttons. 
+The Project is supposed to be easily followed through diffrent choices provided by buttons. The styling is simplistic to keep focus and the reading and the colors are chosen to match those of a book, also to keep focus on the reading. 
 
 ##Features
 
