@@ -44,10 +44,16 @@ h6 {
 
 ul {
     padding: 0;
+    list-style: none;
 }
 
 .btn {
     cursor: pointer;
+}
+.c-btn {
+    margin: 2px;
+    padding: 2px;
+    text-decoration: underline;
 }
 .hidden {
     display: none;
